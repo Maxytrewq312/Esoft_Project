@@ -13,10 +13,10 @@ namespace Esoft_Project
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Esoft_ProjectEntities11 : DbContext
+    public partial class Esoft_ProjectEntities3 : DbContext
     {
-        public Esoft_ProjectEntities11()
-            : base("name=Esoft_ProjectEntities11")
+        public Esoft_ProjectEntities3()
+            : base("name=Esoft_ProjectEntities3")
         {
         }
     
@@ -27,5 +27,6 @@ namespace Esoft_Project
     
         public virtual DbSet<Клиент> Клиент { get; set; }
         public virtual DbSet<Недвижимость> Недвижимость { get; set; }
+        public virtual DbSet<Риелтор> Риелтор { get; set; }
     }
 }

@@ -55,7 +55,7 @@
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(12, 37);
+            this.labelFirstName.Location = new System.Drawing.Point(12, 64);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(29, 13);
             this.labelFirstName.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(12, 53);
+            this.textBoxFirstName.Location = new System.Drawing.Point(15, 80);
             this.textBoxFirstName.Multiline = true;
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(150, 35);
@@ -71,7 +71,8 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(500, 386);
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.Location = new System.Drawing.Point(500, 374);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(90, 40);
             this.buttonAdd.TabIndex = 2;
@@ -90,7 +91,7 @@
             this.Почта});
             this.listViewClient.GridLines = true;
             this.listViewClient.HideSelection = false;
-            this.listViewClient.Location = new System.Drawing.Point(207, 37);
+            this.listViewClient.Location = new System.Drawing.Point(207, 12);
             this.listViewClient.Name = "listViewClient";
             this.listViewClient.Size = new System.Drawing.Size(581, 312);
             this.listViewClient.TabIndex = 3;
@@ -130,7 +131,7 @@
             // 
             // textBoxMiddleName
             // 
-            this.textBoxMiddleName.Location = new System.Drawing.Point(12, 118);
+            this.textBoxMiddleName.Location = new System.Drawing.Point(15, 145);
             this.textBoxMiddleName.Multiline = true;
             this.textBoxMiddleName.Name = "textBoxMiddleName";
             this.textBoxMiddleName.Size = new System.Drawing.Size(150, 35);
@@ -139,7 +140,7 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(12, 182);
+            this.textBoxLastName.Location = new System.Drawing.Point(15, 216);
             this.textBoxLastName.Multiline = true;
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(150, 35);
@@ -147,7 +148,7 @@
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(12, 245);
+            this.textBoxPhone.Location = new System.Drawing.Point(15, 286);
             this.textBoxPhone.Multiline = true;
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(150, 35);
@@ -157,7 +158,7 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(12, 314);
+            this.textBoxEmail.Location = new System.Drawing.Point(15, 357);
             this.textBoxEmail.Multiline = true;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(150, 35);
@@ -165,7 +166,8 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(596, 386);
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEdit.Location = new System.Drawing.Point(596, 374);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(90, 40);
             this.buttonEdit.TabIndex = 8;
@@ -175,7 +177,8 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(692, 386);
+            this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDel.Location = new System.Drawing.Point(692, 374);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(90, 40);
             this.buttonDel.TabIndex = 9;
@@ -186,7 +189,7 @@
             // labelMiddleName
             // 
             this.labelMiddleName.AutoSize = true;
-            this.labelMiddleName.Location = new System.Drawing.Point(9, 102);
+            this.labelMiddleName.Location = new System.Drawing.Point(12, 129);
             this.labelMiddleName.Name = "labelMiddleName";
             this.labelMiddleName.Size = new System.Drawing.Size(56, 13);
             this.labelMiddleName.TabIndex = 10;
@@ -195,7 +198,7 @@
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(9, 166);
+            this.labelLastName.Location = new System.Drawing.Point(12, 200);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(54, 13);
             this.labelLastName.TabIndex = 11;
@@ -205,7 +208,7 @@
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(9, 229);
+            this.labelPhone.Location = new System.Drawing.Point(12, 270);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(52, 13);
             this.labelPhone.TabIndex = 12;
@@ -215,7 +218,7 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(12, 298);
+            this.labelEmail.Location = new System.Drawing.Point(12, 341);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelEmail.Size = new System.Drawing.Size(37, 13);
@@ -226,7 +229,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(347, 403);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

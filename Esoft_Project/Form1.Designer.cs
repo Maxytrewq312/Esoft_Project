@@ -40,6 +40,7 @@
             // 
             // buttonOpenClients
             // 
+            this.buttonOpenClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpenClients.Location = new System.Drawing.Point(6, 140);
             this.buttonOpenClients.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenClients.Name = "buttonOpenClients";
@@ -51,6 +52,8 @@
             // 
             // buttonOpenAgents
             // 
+            this.buttonOpenAgents.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonOpenAgents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpenAgents.Location = new System.Drawing.Point(6, 210);
             this.buttonOpenAgents.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
@@ -58,9 +61,11 @@
             this.buttonOpenAgents.TabIndex = 2;
             this.buttonOpenAgents.Text = "Риелторы";
             this.buttonOpenAgents.UseVisualStyleBackColor = true;
+            this.buttonOpenAgents.Click += new System.EventHandler(this.buttonOpenAgents_Click);
             // 
             // buttonOpenRealEstates
             // 
+            this.buttonOpenRealEstates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpenRealEstates.Location = new System.Drawing.Point(6, 280);
             this.buttonOpenRealEstates.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenRealEstates.Name = "buttonOpenRealEstates";
@@ -72,6 +77,7 @@
             // 
             // buttonOpenDemands
             // 
+            this.buttonOpenDemands.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpenDemands.Location = new System.Drawing.Point(6, 350);
             this.buttonOpenDemands.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenDemands.Name = "buttonOpenDemands";
@@ -83,6 +89,7 @@
             // 
             // buttonOpenSupplies
             // 
+            this.buttonOpenSupplies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpenSupplies.Location = new System.Drawing.Point(6, 420);
             this.buttonOpenSupplies.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenSupplies.Name = "buttonOpenSupplies";
@@ -94,6 +101,7 @@
             // buttonOpenDeals
             // 
             this.buttonOpenDeals.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonOpenDeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpenDeals.Location = new System.Drawing.Point(6, 490);
             this.buttonOpenDeals.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenDeals.Name = "buttonOpenDeals";
@@ -105,7 +113,7 @@
             // Logo
             // 
             this.Logo.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.Logo.Location = new System.Drawing.Point(2, 10);
+            this.Logo.Location = new System.Drawing.Point(12, 12);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(269, 98);
             this.Logo.TabIndex = 0;

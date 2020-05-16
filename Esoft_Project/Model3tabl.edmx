@@ -33,9 +33,20 @@
           <Property Name="Rooms" Type="int" />
           <Property Name="Floor" Type="int" />
         </EntityType>
+        <EntityType Name="Риелтор">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MiddleName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DealShare" Type="int" />
+        </EntityType>
         <EntityContainer Name="Хранилище Esoft_ProjectModelContainer">
           <EntitySet Name="Клиент" EntityType="Self.Клиент" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Недвижимость" EntityType="Self.Недвижимость" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Риелтор" EntityType="Self.Риелтор" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -70,16 +81,27 @@
           <Property Name="Rooms" Type="Int32" />
           <Property Name="Floor" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="Esoft_ProjectEntities11" annotation:LazyLoadingEnabled="true">
+        <EntityType Name="Риелтор">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DealShare" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="Esoft_ProjectEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Клиент" EntityType="Self.Клиент" />
           <EntitySet Name="Недвижимость" EntityType="Self.Недвижимость" />
+          <EntitySet Name="Риелтор" EntityType="Self.Риелтор" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище Esoft_ProjectModelContainer" CdmEntityContainer="Esoft_ProjectEntities11">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Esoft_ProjectModelContainer" CdmEntityContainer="Esoft_ProjectEntities3">
           <EntitySetMapping Name="Клиент">
             <EntityTypeMapping TypeName="Esoft_ProjectModel.Клиент">
               <MappingFragment StoreEntitySet="Клиент">
@@ -107,6 +129,17 @@
                 <ScalarProperty Name="TotalFloors" ColumnName="TotalFloors" />
                 <ScalarProperty Name="Rooms" ColumnName="Rooms" />
                 <ScalarProperty Name="Floor" ColumnName="Floor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Риелтор">
+            <EntityTypeMapping TypeName="Esoft_ProjectModel.Риелтор">
+              <MappingFragment StoreEntitySet="Риелтор">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DealShare" ColumnName="DealShare" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
