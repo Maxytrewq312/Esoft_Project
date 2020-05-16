@@ -26,34 +26,49 @@ namespace Esoft_Project
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Недвижимость realEstate = new Недвижимость();
+            try
+            {
+                Недвижимость realEstate = new Недвижимость();
 
-            realEstate.Address_City = textBoxAddress_City.Text;
-            realEstate.Address_House = textBoxAddress_House.Text;
-            realEstate.Address_Street = textBoxAddress_Street.Text;
-            realEstate.Address_Number = textBoxAddress_Number.Text;
-            realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
-            realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
-            realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
+                realEstate.Address_City = textBoxAddress_City.Text;
+                realEstate.Address_House = textBoxAddress_House.Text;
+                realEstate.Address_Street = textBoxAddress_Street.Text;
+                realEstate.Address_Number = textBoxAddress_Number.Text;
+                realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
+                realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
+                realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
+                if (realEstate.Coordinate_latitude > 90 || realEstate.Coordinate_latitude < -90)
+                {
+                    throw new Exception("Значение широты должно быть не меньше -90 и не больше 90");
+                }
+                if (realEstate.Coordinate_longitude > 180 || realEstate.Coordinate_longitude < -180)
+                {
+                    throw new Exception("Значение долготы должно быть не меньше -180 и не больше 180");
+                }
 
-            if (comboBoxType.SelectedIndex == 0)
-            {
-                realEstate.Type = 0;
-                realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
-                realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
+                if (comboBoxType.SelectedIndex == 0)
+                {
+                    realEstate.Type = 0;
+                    realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
+                    realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
+                }
+                else if (comboBoxType.SelectedIndex == 1)
+                {
+                    realEstate.Type = 1;
+                    realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
+                }
+                else
+                {
+                    realEstate.Type = 2;
+                }
+                Program.wftDb.Недвижимость.Add(realEstate);
+                Program.wftDb.SaveChanges();
+                ShowRealEstateSet();
             }
-            else if(comboBoxType.SelectedIndex == 1)
+            catch(Exception re)
             {
-                realEstate.Type = 1;
-                realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
+                MessageBox.Show("" + re.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                realEstate.Type = 2;
-            }
-            Program.wftDb.Недвижимость.Add(realEstate);
-            Program.wftDb.SaveChanges();
-            ShowRealEstateSet();
         }
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)

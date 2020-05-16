@@ -30,14 +30,30 @@ namespace Esoft_Project
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Риелтор agentSet = new Риелтор();
-            agentSet.FirstName = textBoxFirstName.Text;
-            agentSet.MiddleName = textBoxMiddleName.Text;
-            agentSet.LastName = textBoxLastName.Text;
-            agentSet.DealShare = Convert.ToInt32(textBoxDealShare.Text);
-            Program.wftDb.Риелтор.Add(agentSet);
-            Program.wftDb.SaveChanges();
-            ShowAgent();
+            try
+            {
+                Риелтор agentSet = new Риелтор();
+                agentSet.FirstName = textBoxFirstName.Text;
+                agentSet.MiddleName = textBoxMiddleName.Text;
+                agentSet.LastName = textBoxLastName.Text;
+                agentSet.DealShare = Convert.ToInt32(textBoxDealShare.Text);
+                if (agentSet.FirstName == "" || agentSet.MiddleName == "" || agentSet.LastName == "")
+                {
+                    throw new Exception("Не заполнены поля имени, фамилии или отчества");
+                }
+                if (agentSet.DealShare < 0 || agentSet.DealShare > 100)
+                {
+                    throw new Exception("Это поле должно содержать процент (от 0 до 100)");
+
+                }
+                Program.wftDb.Риелтор.Add(agentSet);
+                Program.wftDb.SaveChanges();
+                ShowAgent();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("" + ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         void ShowAgent()
         {
