@@ -208,9 +208,9 @@
             this.labelCoordinate_latitude.AutoSize = true;
             this.labelCoordinate_latitude.Location = new System.Drawing.Point(12, 238);
             this.labelCoordinate_latitude.Name = "labelCoordinate_latitude";
-            this.labelCoordinate_latitude.Size = new System.Drawing.Size(46, 13);
+            this.labelCoordinate_latitude.Size = new System.Drawing.Size(45, 13);
             this.labelCoordinate_latitude.TabIndex = 14;
-            this.labelCoordinate_latitude.Text = "Ширина";
+            this.labelCoordinate_latitude.Text = "Широта";
             // 
             // labelCoordinate_longitude
             // 

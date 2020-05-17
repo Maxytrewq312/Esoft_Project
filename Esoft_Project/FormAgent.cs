@@ -43,7 +43,7 @@ namespace Esoft_Project
                 }
                 if (agentSet.DealShare < 0 || agentSet.DealShare > 100)
                 {
-                    throw new Exception("Это поле должно содержать процент (от 0 до 100)");
+                    throw new Exception("Поле *Доля коммиссии* должно содержать процент (от 0 до 100)");
 
                 }
                 Program.wftDb.Риелтор.Add(agentSet);
