@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Хранилище Esoft_ProjectModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SupplySet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdAgent" Type="int" Nullable="false" />
+          <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="IdRealEstate" Type="int" Nullable="false" />
+          <Property Name="Price" Type="bigint" Nullable="false" />
+        </EntityType>
         <EntityType Name="Клиент">
           <Key>
             <PropertyRef Name="Id" />
@@ -43,16 +53,78 @@
           <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
           <Property Name="DealShare" Type="int" />
         </EntityType>
+        <Association Name="FK_SupplySet_Клиент">
+          <End Role="Клиент" Type="Self.Клиент" Multiplicity="1" />
+          <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Клиент">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplySet">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplySet_Недвижимость">
+          <End Role="Недвижимость" Type="Self.Недвижимость" Multiplicity="1" />
+          <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Недвижимость">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplySet">
+              <PropertyRef Name="IdRealEstate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplySet_Риелтор">
+          <End Role="Риелтор" Type="Self.Риелтор" Multiplicity="1" />
+          <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Риелтор">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplySet">
+              <PropertyRef Name="IdAgent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Хранилище Esoft_ProjectModelContainer">
+          <EntitySet Name="SupplySet" EntityType="Self.SupplySet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Клиент" EntityType="Self.Клиент" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Недвижимость" EntityType="Self.Недвижимость" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Риелтор" EntityType="Self.Риелтор" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_SupplySet_Клиент" Association="Self.FK_SupplySet_Клиент">
+            <End Role="Клиент" EntitySet="Клиент" />
+            <End Role="SupplySet" EntitySet="SupplySet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplySet_Недвижимость" Association="Self.FK_SupplySet_Недвижимость">
+            <End Role="Недвижимость" EntitySet="Недвижимость" />
+            <End Role="SupplySet" EntitySet="SupplySet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplySet_Риелтор" Association="Self.FK_SupplySet_Риелтор">
+            <End Role="Риелтор" EntitySet="Риелтор" />
+            <End Role="SupplySet" EntitySet="SupplySet" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Esoft_ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SupplySet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdAgent" Type="Int32" Nullable="false" />
+          <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="IdRealEstate" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Клиент" Relationship="Self.FK_SupplySet_Клиент" FromRole="SupplySet" ToRole="Клиент" />
+          <NavigationProperty Name="Недвижимость" Relationship="Self.FK_SupplySet_Недвижимость" FromRole="SupplySet" ToRole="Недвижимость" />
+          <NavigationProperty Name="Риелтор" Relationship="Self.FK_SupplySet_Риелтор" FromRole="SupplySet" ToRole="Риелтор" />
+        </EntityType>
         <EntityType Name="Клиент">
           <Key>
             <PropertyRef Name="Id" />
@@ -63,6 +135,7 @@
           <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SupplySet" Relationship="Self.FK_SupplySet_Клиент" FromRole="Клиент" ToRole="SupplySet" />
         </EntityType>
         <EntityType Name="Недвижимость">
           <Key>
@@ -80,6 +153,7 @@
           <Property Name="TotalFloors" Type="Int32" />
           <Property Name="Rooms" Type="Int32" />
           <Property Name="Floor" Type="Int32" />
+          <NavigationProperty Name="SupplySet" Relationship="Self.FK_SupplySet_Недвижимость" FromRole="Недвижимость" ToRole="SupplySet" />
         </EntityType>
         <EntityType Name="Риелтор">
           <Key>
@@ -90,18 +164,79 @@
           <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DealShare" Type="Int32" />
+          <NavigationProperty Name="SupplySet" Relationship="Self.FK_SupplySet_Риелтор" FromRole="Риелтор" ToRole="SupplySet" />
         </EntityType>
-        <EntityContainer Name="Esoft_ProjectEntities3" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK_SupplySet_Клиент">
+          <End Role="Клиент" Type="Self.Клиент" Multiplicity="1" />
+          <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Клиент">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplySet">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplySet_Недвижимость">
+          <End Role="Недвижимость" Type="Self.Недвижимость" Multiplicity="1" />
+          <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Недвижимость">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplySet">
+              <PropertyRef Name="IdRealEstate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplySet_Риелтор">
+          <End Role="Риелтор" Type="Self.Риелтор" Multiplicity="1" />
+          <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Риелтор">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplySet">
+              <PropertyRef Name="IdAgent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Esoft_ProjectEntities5" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SupplySet" EntityType="Self.SupplySet" />
           <EntitySet Name="Клиент" EntityType="Self.Клиент" />
           <EntitySet Name="Недвижимость" EntityType="Self.Недвижимость" />
           <EntitySet Name="Риелтор" EntityType="Self.Риелтор" />
+          <AssociationSet Name="FK_SupplySet_Клиент" Association="Self.FK_SupplySet_Клиент">
+            <End Role="Клиент" EntitySet="Клиент" />
+            <End Role="SupplySet" EntitySet="SupplySet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplySet_Недвижимость" Association="Self.FK_SupplySet_Недвижимость">
+            <End Role="Недвижимость" EntitySet="Недвижимость" />
+            <End Role="SupplySet" EntitySet="SupplySet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplySet_Риелтор" Association="Self.FK_SupplySet_Риелтор">
+            <End Role="Риелтор" EntitySet="Риелтор" />
+            <End Role="SupplySet" EntitySet="SupplySet" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище Esoft_ProjectModelContainer" CdmEntityContainer="Esoft_ProjectEntities3">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Esoft_ProjectModelContainer" CdmEntityContainer="Esoft_ProjectEntities5">
+          <EntitySetMapping Name="SupplySet">
+            <EntityTypeMapping TypeName="Esoft_ProjectModel.SupplySet">
+              <MappingFragment StoreEntitySet="SupplySet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdAgent" ColumnName="IdAgent" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="IdRealEstate" ColumnName="IdRealEstate" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Клиент">
             <EntityTypeMapping TypeName="Esoft_ProjectModel.Клиент">
               <MappingFragment StoreEntitySet="Клиент">

@@ -12,22 +12,16 @@ namespace Esoft_Project
     using System;
     using System.Collections.Generic;
     
-    public partial class Клиент
+    public partial class SupplySet
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Клиент()
-        {
-            this.SupplySet = new HashSet<SupplySet>();
-        }
-    
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string MiddleName { get; set; }
-        public string LastName { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
+        public int IdAgent { get; set; }
+        public int IdClient { get; set; }
+        public int IdRealEstate { get; set; }
+        public long Price { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SupplySet> SupplySet { get; set; }
+        public virtual Клиент Клиент { get; set; }
+        public virtual Недвижимость Недвижимость { get; set; }
+        public virtual Риелтор Риелтор { get; set; }
     }
 }

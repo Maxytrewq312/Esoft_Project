@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.textBoxAddress_City = new System.Windows.Forms.TextBox();
-            this.textBoxAddress_Street = new System.Windows.Forms.TextBox();
             this.textBoxAddress_House = new System.Windows.Forms.TextBox();
             this.textBoxAddress_Number = new System.Windows.Forms.TextBox();
+            this.textBoxAddress_Street = new System.Windows.Forms.TextBox();
             this.textBoxCoordinate_latitude = new System.Windows.Forms.TextBox();
             this.textBoxCoordinate_longitude = new System.Windows.Forms.TextBox();
             this.textBoxTotalArea = new System.Windows.Forms.TextBox();
@@ -93,29 +93,31 @@
             this.textBoxAddress_City.TabIndex = 0;
             this.textBoxAddress_City.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_City_KeyPress);
             // 
-            // textBoxAddress_Street
-            // 
-            this.textBoxAddress_Street.Location = new System.Drawing.Point(15, 102);
-            this.textBoxAddress_Street.Name = "textBoxAddress_Street";
-            this.textBoxAddress_Street.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddress_Street.TabIndex = 1;
-            // 
             // textBoxAddress_House
             // 
             this.textBoxAddress_House.Location = new System.Drawing.Point(15, 154);
             this.textBoxAddress_House.Name = "textBoxAddress_House";
             this.textBoxAddress_House.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddress_House.TabIndex = 2;
-            this.textBoxAddress_House.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_House_KeyPress);
+            this.textBoxAddress_House.TabIndex = 1;
+            this.textBoxAddress_House.TextChanged += new System.EventHandler(this.textBoxAddress_House_TextChanged);
+            this.textBoxAddress_House.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_House_KeyPress_1);
             // 
             // textBoxAddress_Number
             // 
             this.textBoxAddress_Number.Location = new System.Drawing.Point(15, 203);
             this.textBoxAddress_Number.Name = "textBoxAddress_Number";
             this.textBoxAddress_Number.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddress_Number.TabIndex = 3;
-            this.textBoxAddress_Number.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            this.textBoxAddress_Number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_Number_KeyPress);
+            this.textBoxAddress_Number.TabIndex = 2;
+            this.textBoxAddress_Number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_House_KeyPress);
+            // 
+            // textBoxAddress_Street
+            // 
+            this.textBoxAddress_Street.Location = new System.Drawing.Point(15, 101);
+            this.textBoxAddress_Street.Name = "textBoxAddress_Street";
+            this.textBoxAddress_Street.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddress_Street.TabIndex = 3;
+            this.textBoxAddress_Street.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBoxAddress_Street.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_Number_KeyPress);
             // 
             // textBoxCoordinate_latitude
             // 
@@ -453,9 +455,9 @@
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdd.Location = new System.Drawing.Point(664, 385);
+            this.buttonAdd.Location = new System.Drawing.Point(510, 385);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(90, 40);
+            this.buttonAdd.Size = new System.Drawing.Size(150, 40);
             this.buttonAdd.TabIndex = 24;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseMnemonic = false;
@@ -467,9 +469,9 @@
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.Location = new System.Drawing.Point(760, 385);
+            this.buttonEdit.Location = new System.Drawing.Point(666, 385);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(90, 40);
+            this.buttonEdit.Size = new System.Drawing.Size(150, 40);
             this.buttonEdit.TabIndex = 25;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -480,9 +482,9 @@
             this.buttonDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonDel.Cursor = System.Windows.Forms.Cursors.Default;
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDel.Location = new System.Drawing.Point(856, 385);
+            this.buttonDel.Location = new System.Drawing.Point(822, 385);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(90, 40);
+            this.buttonDel.Size = new System.Drawing.Size(150, 40);
             this.buttonDel.TabIndex = 26;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -538,14 +540,15 @@
             this.Controls.Add(this.textBoxTotalArea);
             this.Controls.Add(this.textBoxCoordinate_longitude);
             this.Controls.Add(this.textBoxCoordinate_latitude);
+            this.Controls.Add(this.textBoxAddress_Street);
             this.Controls.Add(this.textBoxAddress_Number);
             this.Controls.Add(this.textBoxAddress_House);
-            this.Controls.Add(this.textBoxAddress_Street);
             this.Controls.Add(this.textBoxAddress_City);
             this.Controls.Add(this.listViewRealEstateSet_Apartment);
             this.Controls.Add(this.listViewRealEstateSet_Land);
             this.Controls.Add(this.listViewRealEstateSet_House);
             this.Name = "FormRealEstate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Объекты недвижимости";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -556,9 +559,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBoxAddress_City;
-        private System.Windows.Forms.TextBox textBoxAddress_Street;
         private System.Windows.Forms.TextBox textBoxAddress_House;
         private System.Windows.Forms.TextBox textBoxAddress_Number;
+        private System.Windows.Forms.TextBox textBoxAddress_Street;
         private System.Windows.Forms.TextBox textBoxCoordinate_latitude;
         private System.Windows.Forms.TextBox textBoxCoordinate_longitude;
         private System.Windows.Forms.TextBox textBoxTotalArea;

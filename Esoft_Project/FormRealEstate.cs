@@ -31,9 +31,9 @@ namespace Esoft_Project
                 Недвижимость realEstate = new Недвижимость();
 
                 realEstate.Address_City = textBoxAddress_City.Text;
-                realEstate.Address_House = textBoxAddress_House.Text;
-                realEstate.Address_Street = textBoxAddress_Street.Text;
-                realEstate.Address_Number = textBoxAddress_Number.Text;
+                realEstate.Address_House = textBoxAddress_Number.Text;
+                realEstate.Address_Street = textBoxAddress_House.Text;
+                realEstate.Address_Number = textBoxAddress_Street.Text;
                 realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                 realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                 realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
@@ -87,9 +87,9 @@ namespace Esoft_Project
                 textBoxTotalFloors.Visible = false;
 
                 textBoxAddress_City.Text = "";
-                textBoxAddress_House.Text = "";
                 textBoxAddress_Number.Text = "";
                 textBoxAddress_Street.Text = "";
+                textBoxAddress_House.Text = "";
                 textBoxCoordinate_latitude.Text = "";
                 textBoxCoordinate_longitude.Text = "";
                 textBoxTotalArea.Text = "";
@@ -111,9 +111,9 @@ namespace Esoft_Project
                 textBoxRooms.Visible = false;
 
                 textBoxAddress_City.Text = "";
-                textBoxAddress_House.Text = "";
                 textBoxAddress_Number.Text = "";
                 textBoxAddress_Street.Text = "";
+                textBoxAddress_House.Text = "";
                 textBoxCoordinate_latitude.Text = "";
                 textBoxCoordinate_longitude.Text = "";
                 textBoxTotalArea.Text = "";
@@ -133,9 +133,9 @@ namespace Esoft_Project
                 textBoxTotalFloors.Visible = false;
 
                 textBoxAddress_City.Text = "";
-                textBoxAddress_House.Text = "";
                 textBoxAddress_Number.Text = "";
                 textBoxAddress_Street.Text = "";
+                textBoxAddress_House.Text = "";
                 textBoxCoordinate_latitude.Text = "";
                 textBoxCoordinate_longitude.Text = "";
                 textBoxTotalArea.Text = "";
@@ -197,9 +197,9 @@ namespace Esoft_Project
                     Недвижимость realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as Недвижимость;
 
                     realEstate.Address_City = textBoxAddress_City.Text;
-                    realEstate.Address_House = textBoxAddress_House.Text;
-                    realEstate.Address_Street = textBoxAddress_Street.Text;
-                    realEstate.Address_Number = textBoxAddress_Number.Text;
+                    realEstate.Address_House = textBoxAddress_Number.Text;
+                    realEstate.Address_Street = textBoxAddress_House.Text;
+                    realEstate.Address_Number = textBoxAddress_Street.Text;
                     realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                     realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
@@ -217,9 +217,9 @@ namespace Esoft_Project
                     Недвижимость realEstate = listViewRealEstateSet_House.SelectedItems[0].Tag as Недвижимость;
 
                     realEstate.Address_City = textBoxAddress_City.Text;
-                    realEstate.Address_House = textBoxAddress_House.Text;
-                    realEstate.Address_Street = textBoxAddress_Street.Text;
-                    realEstate.Address_Number = textBoxAddress_Number.Text;
+                    realEstate.Address_House = textBoxAddress_Number.Text;
+                    realEstate.Address_Street = textBoxAddress_House.Text;
+                    realEstate.Address_Number = textBoxAddress_Street.Text;
                     realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                     realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
@@ -236,9 +236,9 @@ namespace Esoft_Project
                     Недвижимость realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as Недвижимость;
 
                     realEstate.Address_City = textBoxAddress_City.Text;
-                    realEstate.Address_House = textBoxAddress_House.Text;
-                    realEstate.Address_Street = textBoxAddress_Street.Text;
-                    realEstate.Address_Number = textBoxAddress_Number.Text;
+                    realEstate.Address_House = textBoxAddress_Number.Text;
+                    realEstate.Address_Street = textBoxAddress_House.Text;
+                    realEstate.Address_Number = textBoxAddress_Street.Text;
                     realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                     realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
@@ -255,9 +255,9 @@ namespace Esoft_Project
             {
                 Недвижимость realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as Недвижимость;
                 textBoxAddress_City.Text = realEstate.Address_City;
-                textBoxAddress_House.Text = realEstate.Address_House;
-                textBoxAddress_Number.Text = realEstate.Address_Number;
-                textBoxAddress_Street.Text = realEstate.Address_Street;
+                textBoxAddress_Number.Text = realEstate.Address_House;
+                textBoxAddress_Street.Text = realEstate.Address_Number;
+                textBoxAddress_House.Text = realEstate.Address_Street;
                 textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
                 textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
                 textBoxTotalArea.Text = realEstate.TotalArea.ToString();
@@ -267,9 +267,9 @@ namespace Esoft_Project
             else
             {
                 textBoxAddress_City.Text = "";
-                textBoxAddress_House.Text = "";
                 textBoxAddress_Number.Text = "";
                 textBoxAddress_Street.Text = "";
+                textBoxAddress_House.Text = "";
                 textBoxCoordinate_latitude.Text = "";
                 textBoxCoordinate_longitude.Text = "";
                 textBoxTotalArea.Text = "";
@@ -285,9 +285,9 @@ namespace Esoft_Project
             {
                 Недвижимость realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as Недвижимость;
                 textBoxAddress_City.Text = realEstate.Address_City;
-                textBoxAddress_House.Text = realEstate.Address_House;
-                textBoxAddress_Number.Text = realEstate.Address_Number;
-                textBoxAddress_Street.Text = realEstate.Address_Street;
+                textBoxAddress_Number.Text = realEstate.Address_House;
+                textBoxAddress_Street.Text = realEstate.Address_Number;
+                textBoxAddress_House.Text = realEstate.Address_Street;
                 textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
                 textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
                 textBoxTotalArea.Text = realEstate.TotalArea.ToString();
@@ -295,9 +295,9 @@ namespace Esoft_Project
             else
             {
                 textBoxAddress_City.Text = "";
-                textBoxAddress_House.Text = "";
                 textBoxAddress_Number.Text = "";
                 textBoxAddress_Street.Text = "";
+                textBoxAddress_House.Text = "";
                 textBoxCoordinate_latitude.Text = "";
                 textBoxCoordinate_longitude.Text = "";
                 textBoxTotalArea.Text = "";
@@ -310,9 +310,9 @@ namespace Esoft_Project
             {
                 Недвижимость realEstate = listViewRealEstateSet_House.SelectedItems[0].Tag as Недвижимость;
                 textBoxAddress_City.Text = realEstate.Address_City;
-                textBoxAddress_House.Text = realEstate.Address_House;
-                textBoxAddress_Number.Text = realEstate.Address_Number;
-                textBoxAddress_Street.Text = realEstate.Address_Street;
+                textBoxAddress_Number.Text = realEstate.Address_House;
+                textBoxAddress_Street.Text = realEstate.Address_Number;
+                textBoxAddress_House.Text = realEstate.Address_Street;
                 textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
                 textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
                 textBoxTotalArea.Text = realEstate.TotalArea.ToString();
@@ -321,9 +321,9 @@ namespace Esoft_Project
             else
             {
                 textBoxAddress_City.Text = "";
-                textBoxAddress_House.Text = "";
                 textBoxAddress_Number.Text = "";
                 textBoxAddress_Street.Text = "";
+                textBoxAddress_House.Text = "";
                 textBoxCoordinate_latitude.Text = "";
                 textBoxCoordinate_longitude.Text = "";
                 textBoxTotalArea.Text = "";
@@ -345,9 +345,9 @@ namespace Esoft_Project
                         ShowRealEstateSet();
                     }
                     textBoxAddress_City.Text = "";
-                    textBoxAddress_House.Text = "";
                     textBoxAddress_Number.Text = "";
                     textBoxAddress_Street.Text = "";
+                    textBoxAddress_House.Text = "";
                     textBoxCoordinate_latitude.Text = "";
                     textBoxCoordinate_longitude.Text = "";
                     textBoxTotalArea.Text = "";
@@ -364,9 +364,9 @@ namespace Esoft_Project
                         ShowRealEstateSet();
                     }
                     textBoxAddress_City.Text = "";
-                    textBoxAddress_House.Text = "";
                     textBoxAddress_Number.Text = "";
                     textBoxAddress_Street.Text = "";
+                    textBoxAddress_House.Text = "";
                     textBoxCoordinate_latitude.Text = "";
                     textBoxCoordinate_longitude.Text = "";
                     textBoxTotalArea.Text = "";
@@ -382,9 +382,9 @@ namespace Esoft_Project
                         ShowRealEstateSet();
                     }
                     textBoxAddress_City.Text = "";
-                    textBoxAddress_House.Text = "";
                     textBoxAddress_Number.Text = "";
                     textBoxAddress_Street.Text = "";
+                    textBoxAddress_House.Text = "";
                     textBoxCoordinate_latitude.Text = "";
                     textBoxCoordinate_longitude.Text = "";
                     textBoxTotalArea.Text = "";
@@ -404,7 +404,7 @@ namespace Esoft_Project
         private void textBoxAddress_House_KeyPress(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
-            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61) 
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61)
             {
                 e.Handled = true;
             }
@@ -412,11 +412,7 @@ namespace Esoft_Project
 
         private void textBoxAddress_Number_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char number = e.KeyChar;
-            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61) 
-            {
-                e.Handled = true;
-            }
+
         }
 
         private void textBoxCoordinate_latitude_KeyPress(object sender, KeyPressEventArgs e)
@@ -473,6 +469,20 @@ namespace Esoft_Project
         {
             char number = e.KeyChar;
             if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61) 
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxAddress_House_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAddress_House_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61)
             {
                 e.Handled = true;
             }

@@ -92,7 +92,7 @@
             this.Почта});
             this.listViewClient.GridLines = true;
             this.listViewClient.HideSelection = false;
-            this.listViewClient.Location = new System.Drawing.Point(207, 12);
+            this.listViewClient.Location = new System.Drawing.Point(207, 32);
             this.listViewClient.Name = "listViewClient";
             this.listViewClient.Size = new System.Drawing.Size(581, 312);
             this.listViewClient.TabIndex = 3;
@@ -260,6 +260,7 @@
             this.Controls.Add(this.labelFirstName);
             this.Controls.Add(this.listViewClient);
             this.Name = "FormClient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Клиент";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

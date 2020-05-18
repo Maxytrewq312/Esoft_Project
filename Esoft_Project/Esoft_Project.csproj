@@ -79,31 +79,40 @@
     <Compile Include="FormRealEstate.Designer.cs">
       <DependentUpon>FormRealEstate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model3tabl.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model3tabl.Context.tt</DependentUpon>
+    <Compile Include="FormSupply.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Model3tabl.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model3tabl.tt</DependentUpon>
+    <Compile Include="FormSupply.Designer.cs">
+      <DependentUpon>FormSupply.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model3tabl.Designer.cs">
+    <Compile Include="Model4tabl.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model3tabl.edmx</DependentUpon>
+      <DependentUpon>Model4tabl.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model4tabl.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model4tabl.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model4tabl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model4tabl.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupplySet.cs">
+      <DependentUpon>Model4tabl.tt</DependentUpon>
+    </Compile>
     <Compile Include="Клиент.cs">
-      <DependentUpon>Model3tabl.tt</DependentUpon>
+      <DependentUpon>Model4tabl.tt</DependentUpon>
     </Compile>
     <Compile Include="Недвижимость.cs">
-      <DependentUpon>Model3tabl.tt</DependentUpon>
+      <DependentUpon>Model4tabl.tt</DependentUpon>
     </Compile>
     <Compile Include="Риелтор.cs">
-      <DependentUpon>Model3tabl.tt</DependentUpon>
+      <DependentUpon>Model4tabl.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -117,6 +126,9 @@
     <EmbeddedResource Include="FormRealEstate.resx">
       <DependentUpon>FormRealEstate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSupply.resx">
+      <DependentUpon>FormSupply.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -127,12 +139,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Model3tabl.edmx">
+    <EntityDeploy Include="Model4tabl.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model3tabl.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model4tabl.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model3tabl.edmx.diagram">
-      <DependentUpon>Model3tabl.edmx</DependentUpon>
+    <None Include="Model4tabl.edmx.diagram">
+      <DependentUpon>Model4tabl.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -155,15 +167,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model3tabl.Context.tt">
+    <Content Include="Model4tabl.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model3tabl.edmx</DependentUpon>
-      <LastGenOutput>Model3tabl.Context.cs</LastGenOutput>
+      <DependentUpon>Model4tabl.edmx</DependentUpon>
+      <LastGenOutput>Model4tabl.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model3tabl.tt">
+    <Content Include="Model4tabl.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model3tabl.edmx</DependentUpon>
-      <LastGenOutput>Model3tabl.cs</LastGenOutput>
+      <DependentUpon>Model4tabl.edmx</DependentUpon>
+      <LastGenOutput>Model4tabl.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

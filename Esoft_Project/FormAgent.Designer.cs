@@ -226,6 +226,7 @@
             this.Controls.Add(this.textBoxMiddleName);
             this.Controls.Add(this.textBoxFirstName);
             this.Name = "FormAgent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Риелтор";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

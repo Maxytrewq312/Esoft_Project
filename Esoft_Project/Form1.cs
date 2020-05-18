@@ -24,7 +24,8 @@ namespace Esoft_Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form formSupplySet = new FormSupply();
+            formSupplySet.Show();
         }
 
         private void Menu_Load(object sender, EventArgs e)
