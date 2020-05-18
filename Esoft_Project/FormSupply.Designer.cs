@@ -47,6 +47,8 @@
             this.ФамилияРиелтора = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.инициалы = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.городиулица = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxPrice
@@ -54,7 +56,7 @@
             this.textBoxPrice.Location = new System.Drawing.Point(12, 269);
             this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(159, 20);
+            this.textBoxPrice.Size = new System.Drawing.Size(194, 20);
             this.textBoxPrice.TabIndex = 0;
             // 
             // labelAgent
@@ -79,7 +81,7 @@
             // labelRealEstate
             // 
             this.labelRealEstate.AutoSize = true;
-            this.labelRealEstate.Location = new System.Drawing.Point(12, 183);
+            this.labelRealEstate.Location = new System.Drawing.Point(9, 183);
             this.labelRealEstate.Name = "labelRealEstate";
             this.labelRealEstate.Size = new System.Drawing.Size(123, 13);
             this.labelRealEstate.TabIndex = 3;
@@ -88,7 +90,7 @@
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(12, 253);
+            this.labelPrice.Location = new System.Drawing.Point(9, 253);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(33, 13);
             this.labelPrice.TabIndex = 4;
@@ -107,10 +109,10 @@
             this.listViewSupply.FullRowSelect = true;
             this.listViewSupply.GridLines = true;
             this.listViewSupply.HideSelection = false;
-            this.listViewSupply.Location = new System.Drawing.Point(281, 12);
+            this.listViewSupply.Location = new System.Drawing.Point(263, 12);
             this.listViewSupply.MultiSelect = false;
             this.listViewSupply.Name = "listViewSupply";
-            this.listViewSupply.Size = new System.Drawing.Size(864, 350);
+            this.listViewSupply.Size = new System.Drawing.Size(882, 350);
             this.listViewSupply.TabIndex = 5;
             this.listViewSupply.UseCompatibleStateImageBehavior = false;
             this.listViewSupply.View = System.Windows.Forms.View.Details;
@@ -157,16 +159,16 @@
             this.comboBoxAgent.FormattingEnabled = true;
             this.comboBoxAgent.Location = new System.Drawing.Point(12, 59);
             this.comboBoxAgent.Name = "comboBoxAgent";
-            this.comboBoxAgent.Size = new System.Drawing.Size(158, 21);
+            this.comboBoxAgent.Size = new System.Drawing.Size(194, 21);
             this.comboBoxAgent.TabIndex = 9;
             this.comboBoxAgent.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBoxClient
             // 
             this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(12, 129);
+            this.comboBoxClient.Location = new System.Drawing.Point(12, 132);
             this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(158, 21);
+            this.comboBoxClient.Size = new System.Drawing.Size(194, 21);
             this.comboBoxClient.TabIndex = 10;
             // 
             // comboBoxRealEstate
@@ -174,7 +176,7 @@
             this.comboBoxRealEstate.FormattingEnabled = true;
             this.comboBoxRealEstate.Location = new System.Drawing.Point(12, 199);
             this.comboBoxRealEstate.Name = "comboBoxRealEstate";
-            this.comboBoxRealEstate.Size = new System.Drawing.Size(159, 21);
+            this.comboBoxRealEstate.Size = new System.Drawing.Size(194, 21);
             this.comboBoxRealEstate.TabIndex = 11;
             // 
             // Риелтор
@@ -212,11 +214,22 @@
             this.городиулица.Text = "Город и улица ОН";
             this.городиулица.Width = 133;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 386);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(176, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormSupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBoxRealEstate);
             this.Controls.Add(this.comboBoxClient);
             this.Controls.Add(this.comboBoxAgent);
@@ -232,6 +245,7 @@
             this.Name = "FormSupply";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Предложения";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +272,6 @@
         private System.Windows.Forms.ColumnHeader ФамилияРиелтора;
         private System.Windows.Forms.ColumnHeader инициалы;
         private System.Windows.Forms.ColumnHeader городиулица;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
