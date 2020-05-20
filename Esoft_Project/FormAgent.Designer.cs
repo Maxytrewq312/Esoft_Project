@@ -51,7 +51,7 @@
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(12, 76);
+            this.textBoxFirstName.Location = new System.Drawing.Point(12, 31);
             this.textBoxFirstName.Multiline = true;
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(205, 30);
@@ -59,7 +59,7 @@
             // 
             // textBoxMiddleName
             // 
-            this.textBoxMiddleName.Location = new System.Drawing.Point(12, 135);
+            this.textBoxMiddleName.Location = new System.Drawing.Point(12, 90);
             this.textBoxMiddleName.Multiline = true;
             this.textBoxMiddleName.Name = "textBoxMiddleName";
             this.textBoxMiddleName.Size = new System.Drawing.Size(205, 30);
@@ -67,7 +67,7 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(12, 201);
+            this.textBoxLastName.Location = new System.Drawing.Point(12, 156);
             this.textBoxLastName.Multiline = true;
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(205, 30);
@@ -75,7 +75,7 @@
             // 
             // textBoxDealShare
             // 
-            this.textBoxDealShare.Location = new System.Drawing.Point(12, 274);
+            this.textBoxDealShare.Location = new System.Drawing.Point(12, 229);
             this.textBoxDealShare.Multiline = true;
             this.textBoxDealShare.Name = "textBoxDealShare";
             this.textBoxDealShare.Size = new System.Drawing.Size(205, 30);
@@ -85,7 +85,8 @@
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(12, 60);
+            this.labelFirstName.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelFirstName.Location = new System.Drawing.Point(12, 15);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(29, 13);
             this.labelFirstName.TabIndex = 4;
@@ -94,16 +95,18 @@
             // labelMiddleName
             // 
             this.labelMiddleName.AutoSize = true;
-            this.labelMiddleName.Location = new System.Drawing.Point(12, 119);
+            this.labelMiddleName.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelMiddleName.Location = new System.Drawing.Point(12, 74);
             this.labelMiddleName.Name = "labelMiddleName";
-            this.labelMiddleName.Size = new System.Drawing.Size(56, 13);
+            this.labelMiddleName.Size = new System.Drawing.Size(53, 13);
             this.labelMiddleName.TabIndex = 5;
             this.labelMiddleName.Text = "Фамилия";
             // 
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(12, 185);
+            this.labelLastName.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelLastName.Location = new System.Drawing.Point(12, 140);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(54, 13);
             this.labelLastName.TabIndex = 6;
@@ -112,9 +115,10 @@
             // labelDealShare
             // 
             this.labelDealShare.AutoSize = true;
-            this.labelDealShare.Location = new System.Drawing.Point(12, 258);
+            this.labelDealShare.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelDealShare.Location = new System.Drawing.Point(12, 213);
             this.labelDealShare.Name = "labelDealShare";
-            this.labelDealShare.Size = new System.Drawing.Size(101, 13);
+            this.labelDealShare.Size = new System.Drawing.Size(100, 13);
             this.labelDealShare.TabIndex = 7;
             this.labelDealShare.Text = "Доля от комиссии";
             // 
@@ -122,9 +126,11 @@
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdd.Location = new System.Drawing.Point(504, 390);
+            this.buttonAdd.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonAdd.Location = new System.Drawing.Point(265, 390);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(90, 40);
+            this.buttonAdd.Size = new System.Drawing.Size(170, 48);
             this.buttonAdd.TabIndex = 8;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -134,9 +140,11 @@
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.Location = new System.Drawing.Point(600, 390);
+            this.buttonEdit.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonEdit.Location = new System.Drawing.Point(441, 390);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(90, 40);
+            this.buttonEdit.Size = new System.Drawing.Size(170, 48);
             this.buttonEdit.TabIndex = 9;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -146,9 +154,11 @@
             // 
             this.buttonDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDel.Location = new System.Drawing.Point(696, 390);
+            this.buttonDel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonDel.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonDel.Location = new System.Drawing.Point(617, 390);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(90, 40);
+            this.buttonDel.Size = new System.Drawing.Size(170, 48);
             this.buttonDel.TabIndex = 10;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -162,6 +172,7 @@
             this.Фамилия,
             this.Отчество,
             this.Доля_от_комиссии});
+            this.listViewAgent.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.listViewAgent.FullRowSelect = true;
             this.listViewAgent.GridLines = true;
             this.listViewAgent.HideSelection = false;
@@ -200,9 +211,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 390);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(129, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;

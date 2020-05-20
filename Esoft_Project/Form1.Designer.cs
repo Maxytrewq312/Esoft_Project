@@ -43,6 +43,8 @@
             // 
             this.buttonOpenClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonOpenClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenClients.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonOpenClients.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonOpenClients.Location = new System.Drawing.Point(6, 140);
             this.buttonOpenClients.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenClients.Name = "buttonOpenClients";
@@ -57,6 +59,8 @@
             this.buttonOpenAgents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonOpenAgents.Cursor = System.Windows.Forms.Cursors.Default;
             this.buttonOpenAgents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenAgents.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonOpenAgents.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonOpenAgents.Location = new System.Drawing.Point(6, 210);
             this.buttonOpenAgents.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
@@ -70,6 +74,8 @@
             // 
             this.buttonOpenRealEstates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonOpenRealEstates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenRealEstates.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonOpenRealEstates.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonOpenRealEstates.Location = new System.Drawing.Point(6, 280);
             this.buttonOpenRealEstates.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenRealEstates.Name = "buttonOpenRealEstates";
@@ -83,6 +89,8 @@
             // 
             this.buttonOpenSupplies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonOpenSupplies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenSupplies.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonOpenSupplies.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonOpenSupplies.Location = new System.Drawing.Point(6, 350);
             this.buttonOpenSupplies.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenSupplies.Name = "buttonOpenSupplies";
@@ -96,6 +104,8 @@
             // 
             this.buttonOpenDemands.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonOpenDemands.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenDemands.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonOpenDemands.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonOpenDemands.Location = new System.Drawing.Point(6, 420);
             this.buttonOpenDemands.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenDemands.Name = "buttonOpenDemands";
@@ -110,6 +120,8 @@
             this.buttonOpenDeals.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonOpenDeals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonOpenDeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenDeals.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonOpenDeals.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonOpenDeals.Location = new System.Drawing.Point(6, 490);
             this.buttonOpenDeals.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
             this.buttonOpenDeals.Name = "buttonOpenDeals";
@@ -122,11 +134,13 @@
             // labelHello
             // 
             this.labelHello.AutoSize = true;
+            this.labelHello.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelHello.Location = new System.Drawing.Point(77, 9);
             this.labelHello.Name = "labelHello";
             this.labelHello.Size = new System.Drawing.Size(44, 13);
             this.labelHello.TabIndex = 7;
             this.labelHello.Text = "Привет";
+            this.labelHello.Click += new System.EventHandler(this.labelHello_Click);
             // 
             // Logo
             // 

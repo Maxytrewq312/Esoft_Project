@@ -64,5 +64,10 @@ namespace Esoft_Project
             Form formDeal = new FormDeal();
             formDeal.Show();
         }
+
+        private void labelHello_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

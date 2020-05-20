@@ -87,7 +87,7 @@
             // textBoxAddress_City
             // 
             this.textBoxAddress_City.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxAddress_City.Location = new System.Drawing.Point(15, 52);
+            this.textBoxAddress_City.Location = new System.Drawing.Point(12, 30);
             this.textBoxAddress_City.Name = "textBoxAddress_City";
             this.textBoxAddress_City.Size = new System.Drawing.Size(100, 20);
             this.textBoxAddress_City.TabIndex = 0;
@@ -95,7 +95,7 @@
             // 
             // textBoxAddress_Street
             // 
-            this.textBoxAddress_Street.Location = new System.Drawing.Point(15, 154);
+            this.textBoxAddress_Street.Location = new System.Drawing.Point(12, 132);
             this.textBoxAddress_Street.Name = "textBoxAddress_Street";
             this.textBoxAddress_Street.Size = new System.Drawing.Size(100, 20);
             this.textBoxAddress_Street.TabIndex = 1;
@@ -104,7 +104,7 @@
             // 
             // textBoxAddress_Number
             // 
-            this.textBoxAddress_Number.Location = new System.Drawing.Point(15, 203);
+            this.textBoxAddress_Number.Location = new System.Drawing.Point(12, 181);
             this.textBoxAddress_Number.Name = "textBoxAddress_Number";
             this.textBoxAddress_Number.Size = new System.Drawing.Size(100, 20);
             this.textBoxAddress_Number.TabIndex = 2;
@@ -112,7 +112,7 @@
             // 
             // textBoxAddress_House
             // 
-            this.textBoxAddress_House.Location = new System.Drawing.Point(15, 101);
+            this.textBoxAddress_House.Location = new System.Drawing.Point(12, 79);
             this.textBoxAddress_House.Name = "textBoxAddress_House";
             this.textBoxAddress_House.Size = new System.Drawing.Size(100, 20);
             this.textBoxAddress_House.TabIndex = 3;
@@ -121,7 +121,7 @@
             // 
             // textBoxCoordinate_latitude
             // 
-            this.textBoxCoordinate_latitude.Location = new System.Drawing.Point(15, 254);
+            this.textBoxCoordinate_latitude.Location = new System.Drawing.Point(12, 232);
             this.textBoxCoordinate_latitude.Name = "textBoxCoordinate_latitude";
             this.textBoxCoordinate_latitude.Size = new System.Drawing.Size(100, 20);
             this.textBoxCoordinate_latitude.TabIndex = 4;
@@ -129,7 +129,7 @@
             // 
             // textBoxCoordinate_longitude
             // 
-            this.textBoxCoordinate_longitude.Location = new System.Drawing.Point(15, 302);
+            this.textBoxCoordinate_longitude.Location = new System.Drawing.Point(12, 280);
             this.textBoxCoordinate_longitude.Name = "textBoxCoordinate_longitude";
             this.textBoxCoordinate_longitude.Size = new System.Drawing.Size(100, 20);
             this.textBoxCoordinate_longitude.TabIndex = 5;
@@ -137,7 +137,7 @@
             // 
             // textBoxTotalArea
             // 
-            this.textBoxTotalArea.Location = new System.Drawing.Point(15, 353);
+            this.textBoxTotalArea.Location = new System.Drawing.Point(12, 331);
             this.textBoxTotalArea.Name = "textBoxTotalArea";
             this.textBoxTotalArea.Size = new System.Drawing.Size(100, 20);
             this.textBoxTotalArea.TabIndex = 6;
@@ -146,7 +146,7 @@
             // 
             // textBoxRooms
             // 
-            this.textBoxRooms.Location = new System.Drawing.Point(169, 102);
+            this.textBoxRooms.Location = new System.Drawing.Point(166, 79);
             this.textBoxRooms.Name = "textBoxRooms";
             this.textBoxRooms.Size = new System.Drawing.Size(100, 20);
             this.textBoxRooms.TabIndex = 7;
@@ -154,7 +154,7 @@
             // 
             // textBoxFloor
             // 
-            this.textBoxFloor.Location = new System.Drawing.Point(169, 154);
+            this.textBoxFloor.Location = new System.Drawing.Point(166, 132);
             this.textBoxFloor.Name = "textBoxFloor";
             this.textBoxFloor.Size = new System.Drawing.Size(100, 20);
             this.textBoxFloor.TabIndex = 8;
@@ -162,7 +162,7 @@
             // 
             // textBoxTotalFloors
             // 
-            this.textBoxTotalFloors.Location = new System.Drawing.Point(15, 403);
+            this.textBoxTotalFloors.Location = new System.Drawing.Point(166, 79);
             this.textBoxTotalFloors.Name = "textBoxTotalFloors";
             this.textBoxTotalFloors.Size = new System.Drawing.Size(100, 20);
             this.textBoxTotalFloors.TabIndex = 9;
@@ -172,25 +172,28 @@
             // labelAddress_City
             // 
             this.labelAddress_City.AutoSize = true;
-            this.labelAddress_City.Location = new System.Drawing.Point(12, 36);
+            this.labelAddress_City.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelAddress_City.Location = new System.Drawing.Point(9, 14);
             this.labelAddress_City.Name = "labelAddress_City";
-            this.labelAddress_City.Size = new System.Drawing.Size(37, 13);
+            this.labelAddress_City.Size = new System.Drawing.Size(36, 13);
             this.labelAddress_City.TabIndex = 10;
             this.labelAddress_City.Text = "Город";
             // 
             // labelAddress_Street
             // 
             this.labelAddress_Street.AutoSize = true;
-            this.labelAddress_Street.Location = new System.Drawing.Point(12, 85);
+            this.labelAddress_Street.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelAddress_Street.Location = new System.Drawing.Point(9, 63);
             this.labelAddress_Street.Name = "labelAddress_Street";
-            this.labelAddress_Street.Size = new System.Drawing.Size(39, 13);
+            this.labelAddress_Street.Size = new System.Drawing.Size(38, 13);
             this.labelAddress_Street.TabIndex = 11;
             this.labelAddress_Street.Text = "Улица";
             // 
             // labelAddress_House
             // 
             this.labelAddress_House.AutoSize = true;
-            this.labelAddress_House.Location = new System.Drawing.Point(12, 138);
+            this.labelAddress_House.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelAddress_House.Location = new System.Drawing.Point(9, 116);
             this.labelAddress_House.Name = "labelAddress_House";
             this.labelAddress_House.Size = new System.Drawing.Size(70, 13);
             this.labelAddress_House.TabIndex = 12;
@@ -199,7 +202,8 @@
             // labelAddress_Number
             // 
             this.labelAddress_Number.AutoSize = true;
-            this.labelAddress_Number.Location = new System.Drawing.Point(12, 187);
+            this.labelAddress_Number.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelAddress_Number.Location = new System.Drawing.Point(9, 165);
             this.labelAddress_Number.Name = "labelAddress_Number";
             this.labelAddress_Number.Size = new System.Drawing.Size(93, 13);
             this.labelAddress_Number.TabIndex = 13;
@@ -208,25 +212,28 @@
             // labelCoordinate_latitude
             // 
             this.labelCoordinate_latitude.AutoSize = true;
-            this.labelCoordinate_latitude.Location = new System.Drawing.Point(12, 238);
+            this.labelCoordinate_latitude.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelCoordinate_latitude.Location = new System.Drawing.Point(9, 216);
             this.labelCoordinate_latitude.Name = "labelCoordinate_latitude";
-            this.labelCoordinate_latitude.Size = new System.Drawing.Size(45, 13);
+            this.labelCoordinate_latitude.Size = new System.Drawing.Size(46, 13);
             this.labelCoordinate_latitude.TabIndex = 14;
             this.labelCoordinate_latitude.Text = "Широта";
             // 
             // labelCoordinate_longitude
             // 
             this.labelCoordinate_longitude.AutoSize = true;
-            this.labelCoordinate_longitude.Location = new System.Drawing.Point(12, 286);
+            this.labelCoordinate_longitude.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelCoordinate_longitude.Location = new System.Drawing.Point(9, 264);
             this.labelCoordinate_longitude.Name = "labelCoordinate_longitude";
-            this.labelCoordinate_longitude.Size = new System.Drawing.Size(50, 13);
+            this.labelCoordinate_longitude.Size = new System.Drawing.Size(49, 13);
             this.labelCoordinate_longitude.TabIndex = 15;
             this.labelCoordinate_longitude.Text = "Долгота";
             // 
             // labelTotalArea
             // 
             this.labelTotalArea.AutoSize = true;
-            this.labelTotalArea.Location = new System.Drawing.Point(12, 337);
+            this.labelTotalArea.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelTotalArea.Location = new System.Drawing.Point(9, 315);
             this.labelTotalArea.Name = "labelTotalArea";
             this.labelTotalArea.Size = new System.Drawing.Size(54, 13);
             this.labelTotalArea.TabIndex = 16;
@@ -235,25 +242,28 @@
             // labelType
             // 
             this.labelType.AutoSize = true;
-            this.labelType.Location = new System.Drawing.Point(166, 36);
+            this.labelType.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelType.Location = new System.Drawing.Point(163, 14);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(149, 13);
+            this.labelType.Size = new System.Drawing.Size(148, 13);
             this.labelType.TabIndex = 17;
             this.labelType.Text = "Тип объекта недвижимости";
             // 
             // labelRooms
             // 
             this.labelRooms.AutoSize = true;
-            this.labelRooms.Location = new System.Drawing.Point(166, 85);
+            this.labelRooms.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelRooms.Location = new System.Drawing.Point(163, 63);
             this.labelRooms.Name = "labelRooms";
-            this.labelRooms.Size = new System.Drawing.Size(106, 13);
+            this.labelRooms.Size = new System.Drawing.Size(107, 13);
             this.labelRooms.TabIndex = 18;
             this.labelRooms.Text = "Количество комнат";
             // 
             // labelFloor
             // 
             this.labelFloor.AutoSize = true;
-            this.labelFloor.Location = new System.Drawing.Point(166, 138);
+            this.labelFloor.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelFloor.Location = new System.Drawing.Point(163, 116);
             this.labelFloor.Name = "labelFloor";
             this.labelFloor.Size = new System.Drawing.Size(33, 13);
             this.labelFloor.TabIndex = 19;
@@ -262,9 +272,10 @@
             // labelTotalFloors
             // 
             this.labelTotalFloors.AutoSize = true;
-            this.labelTotalFloors.Location = new System.Drawing.Point(12, 385);
+            this.labelTotalFloors.Font = new System.Drawing.Font("Roboto Light", 8.25F);
+            this.labelTotalFloors.Location = new System.Drawing.Point(163, 64);
             this.labelTotalFloors.Name = "labelTotalFloors";
-            this.labelTotalFloors.Size = new System.Drawing.Size(106, 13);
+            this.labelTotalFloors.Size = new System.Drawing.Size(107, 13);
             this.labelTotalFloors.TabIndex = 20;
             this.labelTotalFloors.Text = "Количество этажей";
             this.labelTotalFloors.Visible = false;
@@ -281,13 +292,14 @@
             this.Площадь,
             this.Количество_комнат,
             this.Этаж});
+            this.listViewRealEstateSet_Apartment.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.listViewRealEstateSet_Apartment.FullRowSelect = true;
             this.listViewRealEstateSet_Apartment.GridLines = true;
             this.listViewRealEstateSet_Apartment.HideSelection = false;
             this.listViewRealEstateSet_Apartment.Location = new System.Drawing.Point(321, 12);
             this.listViewRealEstateSet_Apartment.MultiSelect = false;
             this.listViewRealEstateSet_Apartment.Name = "listViewRealEstateSet_Apartment";
-            this.listViewRealEstateSet_Apartment.Size = new System.Drawing.Size(651, 344);
+            this.listViewRealEstateSet_Apartment.Size = new System.Drawing.Size(684, 344);
             this.listViewRealEstateSet_Apartment.TabIndex = 21;
             this.listViewRealEstateSet_Apartment.UseCompatibleStateImageBehavior = false;
             this.listViewRealEstateSet_Apartment.View = System.Windows.Forms.View.Details;
@@ -345,13 +357,14 @@
             this.Долгота2,
             this.Площадь2,
             this.Количество_этажей});
+            this.listViewRealEstateSet_House.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.listViewRealEstateSet_House.FullRowSelect = true;
             this.listViewRealEstateSet_House.GridLines = true;
             this.listViewRealEstateSet_House.HideSelection = false;
             this.listViewRealEstateSet_House.Location = new System.Drawing.Point(321, 12);
             this.listViewRealEstateSet_House.MultiSelect = false;
             this.listViewRealEstateSet_House.Name = "listViewRealEstateSet_House";
-            this.listViewRealEstateSet_House.Size = new System.Drawing.Size(651, 344);
+            this.listViewRealEstateSet_House.Size = new System.Drawing.Size(683, 344);
             this.listViewRealEstateSet_House.TabIndex = 22;
             this.listViewRealEstateSet_House.UseCompatibleStateImageBehavior = false;
             this.listViewRealEstateSet_House.View = System.Windows.Forms.View.Details;
@@ -405,13 +418,14 @@
             this.Широта1,
             this.Долгота1,
             this.Площадь1});
+            this.listViewRealEstateSet_Land.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold);
             this.listViewRealEstateSet_Land.FullRowSelect = true;
             this.listViewRealEstateSet_Land.GridLines = true;
             this.listViewRealEstateSet_Land.HideSelection = false;
             this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(321, 12);
             this.listViewRealEstateSet_Land.MultiSelect = false;
             this.listViewRealEstateSet_Land.Name = "listViewRealEstateSet_Land";
-            this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(651, 344);
+            this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(683, 344);
             this.listViewRealEstateSet_Land.TabIndex = 23;
             this.listViewRealEstateSet_Land.UseCompatibleStateImageBehavior = false;
             this.listViewRealEstateSet_Land.View = System.Windows.Forms.View.Details;
@@ -455,9 +469,11 @@
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdd.Location = new System.Drawing.Point(510, 385);
+            this.buttonAdd.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonAdd.Location = new System.Drawing.Point(483, 385);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(150, 40);
+            this.buttonAdd.Size = new System.Drawing.Size(170, 48);
             this.buttonAdd.TabIndex = 24;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseMnemonic = false;
@@ -469,9 +485,11 @@
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.Location = new System.Drawing.Point(666, 385);
+            this.buttonEdit.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonEdit.Location = new System.Drawing.Point(659, 385);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(150, 40);
+            this.buttonEdit.Size = new System.Drawing.Size(170, 48);
             this.buttonEdit.TabIndex = 25;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -482,9 +500,11 @@
             this.buttonDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(234)))));
             this.buttonDel.Cursor = System.Windows.Forms.Cursors.Default;
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDel.Location = new System.Drawing.Point(822, 385);
+            this.buttonDel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonDel.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonDel.Location = new System.Drawing.Point(835, 385);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(150, 40);
+            this.buttonDel.Size = new System.Drawing.Size(170, 48);
             this.buttonDel.TabIndex = 26;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -497,7 +517,7 @@
             "Квартира",
             "Дом",
             "Земля"});
-            this.comboBoxType.Location = new System.Drawing.Point(169, 52);
+            this.comboBoxType.Location = new System.Drawing.Point(166, 30);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(100, 21);
             this.comboBoxType.TabIndex = 27;
@@ -506,7 +526,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(144, 385);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 385);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(157, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -517,13 +537,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 450);
+            this.ClientSize = new System.Drawing.Size(1021, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBoxType);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.labelTotalFloors);
             this.Controls.Add(this.labelFloor);
             this.Controls.Add(this.labelRooms);
             this.Controls.Add(this.labelType);
@@ -534,7 +553,6 @@
             this.Controls.Add(this.labelAddress_House);
             this.Controls.Add(this.labelAddress_Street);
             this.Controls.Add(this.labelAddress_City);
-            this.Controls.Add(this.textBoxTotalFloors);
             this.Controls.Add(this.textBoxFloor);
             this.Controls.Add(this.textBoxRooms);
             this.Controls.Add(this.textBoxTotalArea);
@@ -547,6 +565,8 @@
             this.Controls.Add(this.listViewRealEstateSet_Apartment);
             this.Controls.Add(this.listViewRealEstateSet_Land);
             this.Controls.Add(this.listViewRealEstateSet_House);
+            this.Controls.Add(this.labelTotalFloors);
+            this.Controls.Add(this.textBoxTotalFloors);
             this.Name = "FormRealEstate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Объекты недвижимости";
