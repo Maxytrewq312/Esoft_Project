@@ -12,10 +12,10 @@ namespace Esoft_Project
     using System;
     using System.Collections.Generic;
     
-    public partial class SupplySet
+    public partial class DemandSet
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SupplySet()
+        public DemandSet()
         {
             this.DealSet = new HashSet<DealSet>();
         }
@@ -23,13 +23,21 @@ namespace Esoft_Project
         public int Id { get; set; }
         public int IdAgent { get; set; }
         public int IdClient { get; set; }
-        public int IdRealEstate { get; set; }
-        public long Price { get; set; }
+        public Nullable<int> Type { get; set; }
+        public Nullable<long> MinPrice { get; set; }
+        public Nullable<long> MaxPrice { get; set; }
+        public Nullable<double> MinArea { get; set; }
+        public Nullable<double> MaxArea { get; set; }
+        public Nullable<int> MinRooms { get; set; }
+        public Nullable<int> MaxRooms { get; set; }
+        public Nullable<int> MinFloor { get; set; }
+        public Nullable<int> MaxFloor { get; set; }
+        public Nullable<int> MinFloors { get; set; }
+        public Nullable<int> MaxFloors { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DealSet> DealSet { get; set; }
         public virtual Клиент Клиент { get; set; }
-        public virtual Недвижимость Недвижимость { get; set; }
         public virtual Риелтор Риелтор { get; set; }
     }
 }

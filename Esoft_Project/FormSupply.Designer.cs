@@ -34,19 +34,19 @@
             this.labelRealEstate = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
             this.listViewSupply = new System.Windows.Forms.ListView();
+            this.Риелтор = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ФамилияРиелтора = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Клиент = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.инициалы = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ОбъектНедвижимости = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.городиулица = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Цена = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
             this.comboBoxAgent = new System.Windows.Forms.ComboBox();
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.comboBoxRealEstate = new System.Windows.Forms.ComboBox();
-            this.Риелтор = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Клиент = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ОбъектНедвижимости = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Цена = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ФамилияРиелтора = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.инициалы = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.городиулица = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -112,11 +112,46 @@
             this.listViewSupply.Location = new System.Drawing.Point(263, 12);
             this.listViewSupply.MultiSelect = false;
             this.listViewSupply.Name = "listViewSupply";
-            this.listViewSupply.Size = new System.Drawing.Size(882, 350);
+            this.listViewSupply.Size = new System.Drawing.Size(863, 350);
             this.listViewSupply.TabIndex = 5;
             this.listViewSupply.UseCompatibleStateImageBehavior = false;
             this.listViewSupply.View = System.Windows.Forms.View.Details;
             this.listViewSupply.SelectedIndexChanged += new System.EventHandler(this.listViewSupply_SelectedIndexChanged);
+            // 
+            // Риелтор
+            // 
+            this.Риелтор.Text = "Риелтор";
+            this.Риелтор.Width = 64;
+            // 
+            // ФамилияРиелтора
+            // 
+            this.ФамилияРиелтора.Text = "Фамилия риелтора";
+            this.ФамилияРиелтора.Width = 137;
+            // 
+            // Клиент
+            // 
+            this.Клиент.Text = "Клиент";
+            this.Клиент.Width = 127;
+            // 
+            // инициалы
+            // 
+            this.инициалы.Text = "Фамилия и имя клиента";
+            this.инициалы.Width = 166;
+            // 
+            // ОбъектНедвижимости
+            // 
+            this.ОбъектНедвижимости.Text = "Объект недвижимости";
+            this.ОбъектНедвижимости.Width = 131;
+            // 
+            // городиулица
+            // 
+            this.городиулица.Text = "Город и улица ОН";
+            this.городиулица.Width = 133;
+            // 
+            // Цена
+            // 
+            this.Цена.Text = "Цена";
+            this.Цена.Width = 101;
             // 
             // buttonAdd
             // 
@@ -178,41 +213,6 @@
             this.comboBoxRealEstate.Name = "comboBoxRealEstate";
             this.comboBoxRealEstate.Size = new System.Drawing.Size(194, 21);
             this.comboBoxRealEstate.TabIndex = 11;
-            // 
-            // Риелтор
-            // 
-            this.Риелтор.Text = "Риелтор";
-            this.Риелтор.Width = 64;
-            // 
-            // Клиент
-            // 
-            this.Клиент.Text = "Клиент";
-            this.Клиент.Width = 64;
-            // 
-            // ОбъектНедвижимости
-            // 
-            this.ОбъектНедвижимости.Text = "Объект недвижимости";
-            this.ОбъектНедвижимости.Width = 131;
-            // 
-            // Цена
-            // 
-            this.Цена.Text = "Цена";
-            this.Цена.Width = 101;
-            // 
-            // ФамилияРиелтора
-            // 
-            this.ФамилияРиелтора.Text = "Фамилия риелтора";
-            this.ФамилияРиелтора.Width = 137;
-            // 
-            // инициалы
-            // 
-            this.инициалы.Text = "Фамилия и имя клиента";
-            this.инициалы.Width = 166;
-            // 
-            // городиулица
-            // 
-            this.городиулица.Text = "Город и улица ОН";
-            this.городиулица.Width = 133;
             // 
             // pictureBox1
             // 

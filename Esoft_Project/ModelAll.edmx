@@ -5,6 +5,33 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Хранилище Esoft_ProjectModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DealSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSupply" Type="int" Nullable="false" />
+          <Property Name="IdDemand" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DemandSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdAgent" Type="int" Nullable="false" />
+          <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="Type" Type="int" />
+          <Property Name="MinPrice" Type="bigint" />
+          <Property Name="MaxPrice" Type="bigint" />
+          <Property Name="MinArea" Type="float" />
+          <Property Name="MaxArea" Type="float" />
+          <Property Name="MinRooms" Type="int" />
+          <Property Name="MaxRooms" Type="int" />
+          <Property Name="MinFloor" Type="int" />
+          <Property Name="MaxFloor" Type="int" />
+          <Property Name="MinFloors" Type="int" />
+          <Property Name="MaxFloors" Type="int" />
+        </EntityType>
         <EntityType Name="SupplySet">
           <Key>
             <PropertyRef Name="Id" />
@@ -14,6 +41,15 @@
           <Property Name="IdClient" Type="int" Nullable="false" />
           <Property Name="IdRealEstate" Type="int" Nullable="false" />
           <Property Name="Price" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Клиент">
           <Key>
@@ -53,6 +89,54 @@
           <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
           <Property Name="DealShare" Type="int" />
         </EntityType>
+        <Association Name="FK_DealSet_DemandSet">
+          <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="1" />
+          <End Role="DealSet" Type="Self.DealSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DemandSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DealSet">
+              <PropertyRef Name="IdDemand" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DealSet_SupplySet">
+          <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="1" />
+          <End Role="DealSet" Type="Self.DealSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SupplySet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DealSet">
+              <PropertyRef Name="IdSupply" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DemandSet_Клиент">
+          <End Role="Клиент" Type="Self.Клиент" Multiplicity="1" />
+          <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Клиент">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DemandSet">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DemandSet_Риелтор">
+          <End Role="Риелтор" Type="Self.Риелтор" Multiplicity="1" />
+          <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Риелтор">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DemandSet">
+              <PropertyRef Name="IdAgent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SupplySet_Клиент">
           <End Role="Клиент" Type="Self.Клиент" Multiplicity="1" />
           <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
@@ -90,10 +174,29 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Хранилище Esoft_ProjectModelContainer">
+          <EntitySet Name="DealSet" EntityType="Self.DealSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DemandSet" EntityType="Self.DemandSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SupplySet" EntityType="Self.SupplySet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Клиент" EntityType="Self.Клиент" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Недвижимость" EntityType="Self.Недвижимость" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Риелтор" EntityType="Self.Риелтор" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DealSet_DemandSet" Association="Self.FK_DealSet_DemandSet">
+            <End Role="DemandSet" EntitySet="DemandSet" />
+            <End Role="DealSet" EntitySet="DealSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DealSet_SupplySet" Association="Self.FK_DealSet_SupplySet">
+            <End Role="SupplySet" EntitySet="SupplySet" />
+            <End Role="DealSet" EntitySet="DealSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DemandSet_Клиент" Association="Self.FK_DemandSet_Клиент">
+            <End Role="Клиент" EntitySet="Клиент" />
+            <End Role="DemandSet" EntitySet="DemandSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DemandSet_Риелтор" Association="Self.FK_DemandSet_Риелтор">
+            <End Role="Риелтор" EntitySet="Риелтор" />
+            <End Role="DemandSet" EntitySet="DemandSet" />
+          </AssociationSet>
           <AssociationSet Name="FK_SupplySet_Клиент" Association="Self.FK_SupplySet_Клиент">
             <End Role="Клиент" EntitySet="Клиент" />
             <End Role="SupplySet" EntitySet="SupplySet" />
@@ -112,6 +215,38 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Esoft_ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DealSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSupply" Type="Int32" Nullable="false" />
+          <Property Name="IdDemand" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DemandSet" Relationship="Self.FK_DealSet_DemandSet" FromRole="DealSet" ToRole="DemandSet" />
+          <NavigationProperty Name="SupplySet" Relationship="Self.FK_DealSet_SupplySet" FromRole="DealSet" ToRole="SupplySet" />
+        </EntityType>
+        <EntityType Name="DemandSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdAgent" Type="Int32" Nullable="false" />
+          <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="MinPrice" Type="Int64" />
+          <Property Name="MaxPrice" Type="Int64" />
+          <Property Name="MinArea" Type="Double" />
+          <Property Name="MaxArea" Type="Double" />
+          <Property Name="MinRooms" Type="Int32" />
+          <Property Name="MaxRooms" Type="Int32" />
+          <Property Name="MinFloor" Type="Int32" />
+          <Property Name="MaxFloor" Type="Int32" />
+          <Property Name="MinFloors" Type="Int32" />
+          <Property Name="MaxFloors" Type="Int32" />
+          <NavigationProperty Name="DealSet" Relationship="Self.FK_DealSet_DemandSet" FromRole="DemandSet" ToRole="DealSet" />
+          <NavigationProperty Name="Клиент" Relationship="Self.FK_DemandSet_Клиент" FromRole="DemandSet" ToRole="Клиент" />
+          <NavigationProperty Name="Риелтор" Relationship="Self.FK_DemandSet_Риелтор" FromRole="DemandSet" ToRole="Риелтор" />
+        </EntityType>
         <EntityType Name="SupplySet">
           <Key>
             <PropertyRef Name="Id" />
@@ -121,9 +256,19 @@
           <Property Name="IdClient" Type="Int32" Nullable="false" />
           <Property Name="IdRealEstate" Type="Int32" Nullable="false" />
           <Property Name="Price" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="DealSet" Relationship="Self.FK_DealSet_SupplySet" FromRole="SupplySet" ToRole="DealSet" />
           <NavigationProperty Name="Клиент" Relationship="Self.FK_SupplySet_Клиент" FromRole="SupplySet" ToRole="Клиент" />
           <NavigationProperty Name="Недвижимость" Relationship="Self.FK_SupplySet_Недвижимость" FromRole="SupplySet" ToRole="Недвижимость" />
           <NavigationProperty Name="Риелтор" Relationship="Self.FK_SupplySet_Риелтор" FromRole="SupplySet" ToRole="Риелтор" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Клиент">
           <Key>
@@ -135,6 +280,7 @@
           <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DemandSet" Relationship="Self.FK_DemandSet_Клиент" FromRole="Клиент" ToRole="DemandSet" />
           <NavigationProperty Name="SupplySet" Relationship="Self.FK_SupplySet_Клиент" FromRole="Клиент" ToRole="SupplySet" />
         </EntityType>
         <EntityType Name="Недвижимость">
@@ -164,8 +310,57 @@
           <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DealShare" Type="Int32" />
+          <NavigationProperty Name="DemandSet" Relationship="Self.FK_DemandSet_Риелтор" FromRole="Риелтор" ToRole="DemandSet" />
           <NavigationProperty Name="SupplySet" Relationship="Self.FK_SupplySet_Риелтор" FromRole="Риелтор" ToRole="SupplySet" />
         </EntityType>
+        <Association Name="FK_DealSet_DemandSet">
+          <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="1" />
+          <End Role="DealSet" Type="Self.DealSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DemandSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DealSet">
+              <PropertyRef Name="IdDemand" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DealSet_SupplySet">
+          <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="1" />
+          <End Role="DealSet" Type="Self.DealSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SupplySet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DealSet">
+              <PropertyRef Name="IdSupply" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DemandSet_Клиент">
+          <End Role="Клиент" Type="Self.Клиент" Multiplicity="1" />
+          <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Клиент">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DemandSet">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DemandSet_Риелтор">
+          <End Role="Риелтор" Type="Self.Риелтор" Multiplicity="1" />
+          <End Role="DemandSet" Type="Self.DemandSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Риелтор">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DemandSet">
+              <PropertyRef Name="IdAgent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SupplySet_Клиент">
           <End Role="Клиент" Type="Self.Клиент" Multiplicity="1" />
           <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
@@ -202,11 +397,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Esoft_ProjectEntities5" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Esoft_ProjectEntities12" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DealSet" EntityType="Self.DealSet" />
+          <EntitySet Name="DemandSet" EntityType="Self.DemandSet" />
           <EntitySet Name="SupplySet" EntityType="Self.SupplySet" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
           <EntitySet Name="Клиент" EntityType="Self.Клиент" />
           <EntitySet Name="Недвижимость" EntityType="Self.Недвижимость" />
           <EntitySet Name="Риелтор" EntityType="Self.Риелтор" />
+          <AssociationSet Name="FK_DealSet_DemandSet" Association="Self.FK_DealSet_DemandSet">
+            <End Role="DemandSet" EntitySet="DemandSet" />
+            <End Role="DealSet" EntitySet="DealSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DealSet_SupplySet" Association="Self.FK_DealSet_SupplySet">
+            <End Role="SupplySet" EntitySet="SupplySet" />
+            <End Role="DealSet" EntitySet="DealSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DemandSet_Клиент" Association="Self.FK_DemandSet_Клиент">
+            <End Role="Клиент" EntitySet="Клиент" />
+            <End Role="DemandSet" EntitySet="DemandSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DemandSet_Риелтор" Association="Self.FK_DemandSet_Риелтор">
+            <End Role="Риелтор" EntitySet="Риелтор" />
+            <End Role="DemandSet" EntitySet="DemandSet" />
+          </AssociationSet>
           <AssociationSet Name="FK_SupplySet_Клиент" Association="Self.FK_SupplySet_Клиент">
             <End Role="Клиент" EntitySet="Клиент" />
             <End Role="SupplySet" EntitySet="SupplySet" />
@@ -225,7 +439,36 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище Esoft_ProjectModelContainer" CdmEntityContainer="Esoft_ProjectEntities5">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Esoft_ProjectModelContainer" CdmEntityContainer="Esoft_ProjectEntities12">
+          <EntitySetMapping Name="DealSet">
+            <EntityTypeMapping TypeName="Esoft_ProjectModel.DealSet">
+              <MappingFragment StoreEntitySet="DealSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdSupply" ColumnName="IdSupply" />
+                <ScalarProperty Name="IdDemand" ColumnName="IdDemand" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DemandSet">
+            <EntityTypeMapping TypeName="Esoft_ProjectModel.DemandSet">
+              <MappingFragment StoreEntitySet="DemandSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdAgent" ColumnName="IdAgent" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
+                <ScalarProperty Name="MaxPrice" ColumnName="MaxPrice" />
+                <ScalarProperty Name="MinArea" ColumnName="MinArea" />
+                <ScalarProperty Name="MaxArea" ColumnName="MaxArea" />
+                <ScalarProperty Name="MinRooms" ColumnName="MinRooms" />
+                <ScalarProperty Name="MaxRooms" ColumnName="MaxRooms" />
+                <ScalarProperty Name="MinFloor" ColumnName="MinFloor" />
+                <ScalarProperty Name="MaxFloor" ColumnName="MaxFloor" />
+                <ScalarProperty Name="MinFloors" ColumnName="MinFloors" />
+                <ScalarProperty Name="MaxFloors" ColumnName="MaxFloors" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="SupplySet">
             <EntityTypeMapping TypeName="Esoft_ProjectModel.SupplySet">
               <MappingFragment StoreEntitySet="SupplySet">
@@ -234,6 +477,16 @@
                 <ScalarProperty Name="IdClient" ColumnName="IdClient" />
                 <ScalarProperty Name="IdRealEstate" ColumnName="IdRealEstate" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Esoft_ProjectModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

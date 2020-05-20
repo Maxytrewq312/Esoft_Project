@@ -73,7 +73,7 @@ namespace Esoft_Project
             }
             else
             {
-                MessageBox.Show("Данны не выбраны", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Данные не выбраны", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         void ShowSupplySet()

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.textBoxAddress_City = new System.Windows.Forms.TextBox();
-            this.textBoxAddress_House = new System.Windows.Forms.TextBox();
-            this.textBoxAddress_Number = new System.Windows.Forms.TextBox();
             this.textBoxAddress_Street = new System.Windows.Forms.TextBox();
+            this.textBoxAddress_Number = new System.Windows.Forms.TextBox();
+            this.textBoxAddress_House = new System.Windows.Forms.TextBox();
             this.textBoxCoordinate_latitude = new System.Windows.Forms.TextBox();
             this.textBoxCoordinate_longitude = new System.Windows.Forms.TextBox();
             this.textBoxTotalArea = new System.Windows.Forms.TextBox();
@@ -93,14 +93,14 @@
             this.textBoxAddress_City.TabIndex = 0;
             this.textBoxAddress_City.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_City_KeyPress);
             // 
-            // textBoxAddress_House
+            // textBoxAddress_Street
             // 
-            this.textBoxAddress_House.Location = new System.Drawing.Point(15, 154);
-            this.textBoxAddress_House.Name = "textBoxAddress_House";
-            this.textBoxAddress_House.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddress_House.TabIndex = 1;
-            this.textBoxAddress_House.TextChanged += new System.EventHandler(this.textBoxAddress_House_TextChanged);
-            this.textBoxAddress_House.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_House_KeyPress_1);
+            this.textBoxAddress_Street.Location = new System.Drawing.Point(15, 154);
+            this.textBoxAddress_Street.Name = "textBoxAddress_Street";
+            this.textBoxAddress_Street.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddress_Street.TabIndex = 1;
+            this.textBoxAddress_Street.TextChanged += new System.EventHandler(this.textBoxAddress_House_TextChanged);
+            this.textBoxAddress_Street.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_House_KeyPress_1);
             // 
             // textBoxAddress_Number
             // 
@@ -110,14 +110,14 @@
             this.textBoxAddress_Number.TabIndex = 2;
             this.textBoxAddress_Number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_House_KeyPress);
             // 
-            // textBoxAddress_Street
+            // textBoxAddress_House
             // 
-            this.textBoxAddress_Street.Location = new System.Drawing.Point(15, 101);
-            this.textBoxAddress_Street.Name = "textBoxAddress_Street";
-            this.textBoxAddress_Street.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddress_Street.TabIndex = 3;
-            this.textBoxAddress_Street.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            this.textBoxAddress_Street.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_Number_KeyPress);
+            this.textBoxAddress_House.Location = new System.Drawing.Point(15, 101);
+            this.textBoxAddress_House.Name = "textBoxAddress_House";
+            this.textBoxAddress_House.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddress_House.TabIndex = 3;
+            this.textBoxAddress_House.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBoxAddress_House.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_Number_KeyPress);
             // 
             // textBoxCoordinate_latitude
             // 
@@ -506,9 +506,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(2, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(144, 385);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
@@ -540,9 +540,9 @@
             this.Controls.Add(this.textBoxTotalArea);
             this.Controls.Add(this.textBoxCoordinate_longitude);
             this.Controls.Add(this.textBoxCoordinate_latitude);
-            this.Controls.Add(this.textBoxAddress_Street);
-            this.Controls.Add(this.textBoxAddress_Number);
             this.Controls.Add(this.textBoxAddress_House);
+            this.Controls.Add(this.textBoxAddress_Number);
+            this.Controls.Add(this.textBoxAddress_Street);
             this.Controls.Add(this.textBoxAddress_City);
             this.Controls.Add(this.listViewRealEstateSet_Apartment);
             this.Controls.Add(this.listViewRealEstateSet_Land);
@@ -550,6 +550,7 @@
             this.Name = "FormRealEstate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Объекты недвижимости";
+            this.Load += new System.EventHandler(this.FormRealEstate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -559,9 +560,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBoxAddress_City;
-        private System.Windows.Forms.TextBox textBoxAddress_House;
-        private System.Windows.Forms.TextBox textBoxAddress_Number;
         private System.Windows.Forms.TextBox textBoxAddress_Street;
+        private System.Windows.Forms.TextBox textBoxAddress_Number;
+        private System.Windows.Forms.TextBox textBoxAddress_House;
         private System.Windows.Forms.TextBox textBoxCoordinate_latitude;
         private System.Windows.Forms.TextBox textBoxCoordinate_longitude;
         private System.Windows.Forms.TextBox textBoxTotalArea;
